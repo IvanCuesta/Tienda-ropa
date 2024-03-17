@@ -55,7 +55,8 @@ export async function login(req, res) {
     // Enviar respuesta (en un caso real, aquí se generaría un token JWT)
     res.status(200).send({
       id: usuario.usuario_id,
-      auth: true, token,
+      auth: true,
+      jwt: token,
       message: "Inicio de sesión exitoso!",
     });
   } catch (error) {
